@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FUTURE AS SYSTEMS</title>
+  <title>Automation</title>
   <style>
 
     html, body {
@@ -12,13 +12,25 @@
 
     body {
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin: 0;
+      flex-direction: column;
     }
 
-    img{
+    .sbs{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 120px;
+    }
+
+    #switch{
       width: 40%;
+      margin: 0px;
+      margin-top: 5%;
+    }
+
+    .switch-mini{
+      width: 10%;
       margin: 0px;
       margin-top: 5%;
     }
@@ -45,7 +57,7 @@
       flex-wrap: wrap;
       gap: 2px;
       width: 60%;
-      height: 60%;
+      height: 100%;
     }
 
     .container div {
@@ -61,56 +73,93 @@
       font-size: 0.75vw;
     }
 
+    .info{
+      margin-top: 170px;
+      width: 65%;
+      padding: 5%;
+    }
+
   </style>
 </head>
 <body>
 
-  <div class="title">
-    <h2>TO AUTOMATE OR NOT TO AUTOMATE</h2>
-    <p>A manufacturing company faces increasing demand for its products. With the rise in automation practices within the industry, the company faces the choice of implementing automation or not implementing automation.</p>
-    <img id="switch" onclick="display()"src="off.png"/>
+  <div class="sbs">
+
+    <div class="title">
+      <h2>TO AUTOMATE OR NOT TO AUTOMATE</h2>
+      <p>A manufacturing company faces increasing demand for its products. With the rise in automation practices within the industry, the company faces the choice of implementing automation or not implementing automation.</p>
+      <img id="switch" draggable="false" onclick="display()"src="off.png"/>
+    </div>
+
+    <div class="container">
+
+      <div id="1">School systems will change drastically. Promoting new systems of thought varying from the industrial model of education</div>
+      <div id="2">Repetitive Tasks and Fatigue for workers</div>
+      <div id="3">Individuals may start to seek fulfillment outside of their direct career</div>
+      <div id="4">Rising Operational Costs</div>
+      <div id="5">Deforms the workplace, possibly creating trivial job positions in order to maintain consumer-worker relationship</div>
+      <div id="6">Financial Strain Subsequent Impact: Inability to Invest in Growth Initiatives</div>
+
+      <div id="7">Human error</div>
+      <div id="8">Inability to meet high demands</div>
+      <div id="9">Socioeconomic disparities may result in a shifting of location of work for individuals</div>
+      <div id="10">Requires a restructuring and retraining in employee’s work day</div>
+      <div id="11">Decreased Profit Margins</div>
+      <div id="12">Strained Employee Morale due to lack of automated assistance</div>
+
+      <div id="13">Improved Profit Margins and Higher Revenue Generation</div>
+      <div id="14">A growing preference for human-like interactions might result in a shift in consumer behavior</div>
+      <div id="15">Workers able to keep the jobs they initially had without major changes</div>
+      <div id="16">Sustained humanistic environment of workplace</div>
+      <div id="17">Ability to Invest in Growth Initiatives</div>
+      <div id="18">Large influx of obsolete jobs</div>
+
+      <div id="19">Increased Production Efficiency and  Reduced Operational Costs</div>
+      <div id="20">Enhanced Timeliness in Meeting Demand</div>
+      <div id="21">Improved Market Competitiveness</div>
+      <div id="22">Decreased Market Competitiveness</div>
+      <div id="23">the demand for new skills may outpace the ability of the workforce to acquire them</div>
+      <div id="24">Businesses may have over-reliance which leads to less human articulation</div>
+
+    </div>
+
   </div>
 
-  <div class="container">
+  <div class="info" id="info">
 
-    <div id="1">School systems will change drastically. Promoting new systems of though that vary from the industrial model of education</div>
-    <div id="2">Repetitive Tasks and Fatigue for workers</div>
-    <div id="3">Individuals may start to seek fulfillment outside of their direct career</div>
-    <div id="4">Rising Operational Costs</div>
-    <div id="5">Deforms the workplace, possibly creating trivial job positions in order to maintain consumer-worker relationship</div>
-    <div id="6">Financial Strain Subsequent Impact: Inability to Invest in Growth Initiatives</div>
+    <p style="text-align: center;"><b>THE WORKPLACE'S AUTOMATE-METER</b></p><br>
 
-    <div id="7">Human error</div>
-    <div id="8">Inability to meet high demands</div>
-    <div id="9">Socioeconomic disparities may result in a shifting of location of work for individuals</div>
-    <div id="10">Requires a restructuring and retraining in employee’s work day</div>
-    <div id="11">Decreased Profit Margins</div>
-    <div id="12">Strained Employee Morale due to lack of automated assistance</div>
+    <p>Automation in the workplace is a multifaceted topic that has far reaches consequences, both positive and negative. In our envisioned future, a system is established where individuals have the power to define their own boundaries with automation in their work lives, based off Meadow's seventh intervention point: 
 
-    <div id="13">Improved Profit Margins and Higher Revenue Generation</div>
-    <div id="14">A growing preference for human-like interactions might result in a shift in consumer behavior</div>
-    <div id="15">Workers able to keep the jobs they initially had without major changes</div>
-    <div id="16">Sustained humanistic environment of workplace</div>
-    <div id="17">Ability to Invest in Growth Initiatives</div>
-    <div id="18">Large influx of obsolete jobs</div>
+    <br><br><b>Self-organization.</b> We propose self-organization among workers to adapt to and collaborate with automated systems based on their own preferences and the specific tasks at hand. Essentially, workers will have the power to <i>'turn off and turn on'</i> automation processes within their day-to-day worklife.</p>
 
-    <div id="19">Increased Production Efficiency and  Reduced Operational Costs</div>
-    <div id="20">Enhanced Timeliness in Meeting Demand</div>
-    <div id="21">Improved Market Competitiveness</div>
-    <div id="22">Decreased Market Competitiveness</div>
-    <div id="23">the demand for new skills may outpace the ability of the workforce to acquire them</div>
-    <div id="24">Businesses may have over-reliance which leads to less human articulation</div>
+    <div>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+      <img class="switch-mini" draggable="false" onclick="miniswitch(this)"src="off.png"/>
+    </div>
 
+
+
+    <p><br><br>Further, individuals will have access to transparent communication between themselves and the automated systems. Establishing <b>effective communication channels</b> and providing information on the implications of automation within their lives (based on Meadow's leverage point #5). With information and choice given to indivdual workers a flexible system structure can be creates that allows for the integration and adaptation of new automation technologies while preserving the human workforce's meaningful participation -- also enabling people to have the ability to retain non-automation-dependant experiences.
+
+    <br><br> Balancing feedback loops is another integral aspect of the future of automation and its ultimately compatability with society. Established feedback mechanisms must maintain a balance between labor, automation and the overarching value of both. An individual worker's ability to decide the digital nature of their work environment is just one step to a healthy relationship between oneself and their career.
+    </p><br>
   </div>
-
 
   <script>
 
     let switchElement = document.getElementById("switch");
     let switchState = 'off';
 
-    let automationOn = [2, 4, 6, 7, 8, 11, 12, 15, 16, 22];
-    let automationOff = [1, 3, 5, 9, 10, 13, 14, 17, 18, 19, 20, 21, 23, 24];
+    let automationOff = [2, 4, 6, 7, 8, 11, 12, 15, 16, 22];
+    let automationOn = [1, 3, 5, 9, 10, 13, 14, 17, 18, 19, 20, 21, 23, 24];
 
     function display() {
       if (switchState === 'off') {
@@ -138,9 +187,16 @@
       }
     }
 
-    // let toggleButton = document.getElementById("toggleButton");
-    // toggleButton.addEventListener("click", toggleSwitch);
+    function miniswitch(switchElement){
+      let currentState = switchElement.src.endsWith("on.png") ? "on" : "off";
+      switchElement.src = currentState === "off" ? "on.png" : "off.png";
 
+      var blue = Math.floor(Math.random() * 256);
+      var red = 100;
+      var green = 150;
+      var color = "rgb(" + red + "," + green + "," + blue + ")";
+      document.getElementById("info").style.backgroundColor = color;
+    }
 
   </script>
 
