@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTURE AS SYSTEMS</title>
+  <style>
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    img{
+      width: 40%;
+      margin: 0px;
+      margin-top: 5%;
+    }
+
+    img:hover{
+      cursor: pointer;
+    }
+
+    .title{
+      text-align: center;
+      width: 20%;
+      margin-right: 5%;
+      font-size: 1.2vw;
+    }
+
+    .title p{
+      font-size: 1vw;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 2px;
+      width: 60%;
+      height: 60%;
+    }
+
+    .container div {
+      flex: 0 0 16%;
+      height: 25%;
+      border: 1px solid;
+      text-align: center;
+      box-sizing: border-box;
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75vw;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="title">
+    <h2>TO AUTOMATE OR NOT TO AUTOMATE</h2>
+    <p>A manufacturing company faces increasing demand for its products. With the rise in automation practices within the industry, the company faces the choice of implementing automation or not implementing automation.</p>
+    <img id="switch" onclick="display()"src="off.png"/>
+  </div>
+
+  <div class="container">
+
+    <div id="1">School systems will change drastically. Promoting new systems of though that vary from the industrial model of education</div>
+    <div id="2">Repetitive Tasks and Fatigue for workers</div>
+    <div id="3">Individuals may start to seek fulfillment outside of their direct career</div>
+    <div id="4">Rising Operational Costs</div>
+    <div id="5">Deforms the workplace, possibly creating trivial job positions in order to maintain consumer-worker relationship</div>
+    <div id="6">Financial Strain Subsequent Impact: Inability to Invest in Growth Initiatives</div>
+
+    <div id="7">Human error</div>
+    <div id="8">Inability to meet high demands</div>
+    <div id="9">Socioeconomic disparities may result in a shifting of location of work for individuals</div>
+    <div id="10">Requires a restructuring and retraining in employee’s work day</div>
+    <div id="11">Decreased Profit Margins</div>
+    <div id="12">Strained Employee Morale due to lack of automated assistance</div>
+
+    <div id="13">Improved Profit Margins and Higher Revenue Generation</div>
+    <div id="14">A growing preference for human-like interactions might result in a shift in consumer behavior</div>
+    <div id="15">Workers able to keep the jobs they initially had without major changes</div>
+    <div id="16">Sustained humanistic environment of workplace</div>
+    <div id="17">Ability to Invest in Growth Initiatives</div>
+    <div id="18">Large influx of obsolete jobs</div>
+
+    <div id="19">Increased Production Efficiency and  Reduced Operational Costs</div>
+    <div id="20">Enhanced Timeliness in Meeting Demand</div>
+    <div id="21">Improved Market Competitiveness</div>
+    <div id="22">Decreased Market Competitiveness</div>
+    <div id="23">the demand for new skills may outpace the ability of the workforce to acquire them</div>
+    <div id="24">Businesses may have over-reliance which leads to less human articulation</div>
+
+  </div>
+
+
+  <script>
+
+    let switchElement = document.getElementById("switch");
+    let switchState = 'off';
+
+    let automationOn = [2, 4, 6, 7, 8, 11, 12, 15, 16, 22];
+    let automationOff = [1, 3, 5, 9, 10, 13, 14, 17, 18, 19, 20, 21, 23, 24];
+
+    function display() {
+      if (switchState === 'off') {
+        switchElement.src = "on.png";
+        switchState = 'on';
+        for(let i = 0; i < automationOn.length; i++){
+          let div = document.getElementById(automationOn[i]);
+          div.style.backgroundColor = "#BBE290";
+        }
+        for(let i = 0; i < automationOff.length; i++){
+          let div = document.getElementById(automationOff[i]);
+          div.style.backgroundColor = "white";
+        }
+      } else {
+        switchElement.src = "off.png";
+        switchState = 'off';
+        for(let i = 0; i < automationOn.length; i++){
+          let div = document.getElementById(automationOn[i]);
+          div.style.backgroundColor = "white";
+        }
+        for(let i = 0; i < automationOff.length; i++){
+          let div = document.getElementById(automationOff[i]);
+          div.style.backgroundColor = "#E79B68";
+        }
+      }
+    }
+
+    // let toggleButton = document.getElementById("toggleButton");
+    // toggleButton.addEventListener("click", toggleSwitch);
+
+
+  </script>
+
+</body>
+</html>
