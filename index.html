@@ -58,6 +58,7 @@
       gap: 2px;
       width: 60%;
       height: 100%;
+      margin-bottom: 50px;
     }
 
     .container div {
@@ -74,9 +75,25 @@
     }
 
     .info{
-      margin-top: 170px;
+      margin-top: 50px;
       width: 65%;
       padding: 5%;
+    }
+
+    #handbook-automation-on{
+      width: 50%;
+      border: 1px solid;
+      padding: 20px;
+      margin-top: 70px;
+      display: none;
+    }
+
+    #handbook-automation-off{
+      width: 50%;
+      border: 1px solid;
+      padding: 20px;
+      margin-top: 90px;
+      display: none;
     }
 
   </style>
@@ -125,6 +142,38 @@
 
   </div>
 
+  <div id="handbook-automation-on">
+
+    <h2> EMPLOYEE HANDBOOK: AUTOMATION-WORKER </h2>
+    <p>You have chosen to incorporate automation into your daily tasks. Congratulations on choosing to embrace the cutting-edge world of automation in your day-to-day work life. <br><br>
+
+    As an automation worker, you are at the forefront of technological advancements, contributing to increased efficiency and innovation. Your decision to embed automation tools into your workflow puts you in a pivotal role, driving our company towards a more streamlined and forward-thinking future. 
+
+    <br><br>We encourage you to stay updated on the latest automation technologies. Moving forward, you must take time out of your day to regularly attend relevant training programs for updated technologies and the subsequent skill examinations, in order to continuously modernize your skill set. 
+
+    <br><br> As a company that values human work, note that you can decide to indivdually switch on or off specific automation processes. Semi-regularly doing this can help migitate absolute dependecy on automation in our work environment.
+
+    <br><br>Please note the following information and resources on this webpage is always available to you to view, to learn more about automation in work environments. You can choose to enable/disable automated work services at any time by contacting the Human-Machine-Relations Department. As a company who values human labor, your pay will not be affected by this choice.
+    </p>
+  </div>
+
+  <div id="handbook-automation-off">
+
+    <h2> EMPLOYEE HANDBOOK: NON AUTOMATION-WORKER </h2>
+
+    <p>
+    You have chosen not to incorporate automation into your daily tasks. 
+
+    <br><br>We value your decision to embrace a more traditional approach to work, and your commitment to maintaining a hands-on approach to your responsibilities. While automation is a powerful tool, we recognize that some individuals prefer the human touch and take pride in their craftsmanship. 
+
+    <br><br>As a non-automation worker, you are encouraged to hone your skills, collaborate with automation colleagues, and contribute to our collective success through your unique expertise. Your dedication to preserving the traditional work ethos is highly valued, and we support your choice to craft a career that aligns with your personal preferences. 
+
+    <br><br>Please note the following information and resources on this webpage is always available to you to view, to learn more about automation in work environments. You can choose to enable/disable automated work services at any time by contacting the Human-Machine-Relations Department. 
+
+    <br><br>As a company who values human labor, your pay will not be affected by this choice. We understand that automation has the power to generate higher revenue and productivity; However, as a non-automation worker, your presence is invaluable as you contribute to the company’s independence from absolute-automation. 
+    </p>
+  </div>
+
   <div class="info" id="info">
 
     <p style="text-align: center;"><b>THE WORKPLACE'S AUTOMATE-METER</b></p><br>
@@ -158,6 +207,9 @@
     let switchElement = document.getElementById("switch");
     let switchState = 'off';
 
+    let handbookOn = document.getElementById("handbook-automation-on");
+    let handbookOff = document.getElementById("handbook-automation-off");
+
     let automationOff = [2, 4, 6, 7, 8, 11, 12, 15, 16, 22];
     let automationOn = [1, 3, 5, 9, 10, 13, 14, 17, 18, 19, 20, 21, 23, 24];
 
@@ -165,6 +217,8 @@
       if (switchState === 'off') {
         switchElement.src = "on.png";
         switchState = 'on';
+        handbookOn.style.display = "block";
+        handbookOff.style.display = "none";
         for(let i = 0; i < automationOn.length; i++){
           let div = document.getElementById(automationOn[i]);
           div.style.backgroundColor = "#BBE290";
@@ -176,6 +230,8 @@
       } else {
         switchElement.src = "off.png";
         switchState = 'off';
+        handbookOn.style.display = "none";
+        handbookOff.style.display = "block";
         for(let i = 0; i < automationOn.length; i++){
           let div = document.getElementById(automationOn[i]);
           div.style.backgroundColor = "white";
